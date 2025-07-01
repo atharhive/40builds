@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f7f6; /* Light grey background */
+  color: #2c3e50; /* Dark blue-grey text */
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.main-wrapper {
+  background-color: #ffffff; /* White content background */
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.main-wrapper.show-nav {
+  transform: rotate(-20deg); /* Rotate content when nav is open */
+}
+
+.menu-toggle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.menu-toggle-circle {
+  background-color: #3498db; /* Blue circle */
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.main-wrapper.show-nav .menu-toggle-circle {
+  transform: rotate(-70deg);
+}
+
+.menu-toggle-circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.menu-toggle-circle button:focus {
+  outline: none;
+}
+
+.menu-toggle-circle button#openMenuBtn {
+  left: 60%;
+}
+
+.menu-toggle-circle button#closeMenuBtn {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.main-wrapper.show-nav + .side-navigation li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.side-navigation {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+.side-navigation ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.side-navigation ul li {
+  text-transform: uppercase;
+  color: #34495e; /* Dark blue-grey for nav items */
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+.side-navigation ul li svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.side-navigation ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+.side-navigation ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.side-navigation a {
+  color: #34495e; /* Dark blue-grey for links */
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.side-navigation a:hover {
+  color: #2ecc71; /* Green on hover */
+  font-weight: bold;
+}
+
+.page-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.page-content h1 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.page-content small {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.page-content p {
+  color: #555;
+  line-height: 1.5;
+}

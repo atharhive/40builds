@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Dynamic User Search Filter</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h4 class="title">Dynamic User Search</h4>
+        <small class="subtitle">Filter users by name or location</small>
+        <input type="text" id="filterInput" placeholder="Search users...">
+        <button id="clearFilterBtn">Clear Filter</button>
+      </header>
+
+      <ul id="userList" class="user-list">
+        <li>
+          <h3>Loading users...</h3>
+        </li>
+      </ul>
+    </div>
+    <script src="js/script.js"></script>
+  </body>

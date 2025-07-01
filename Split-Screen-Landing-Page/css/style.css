@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --left-overlay-color: rgba(52, 152, 219, 0.7); /* Blue with transparency */
+  --right-overlay-color: rgba(46, 204, 113, 0.7); /* Green with transparency */
+  --left-btn-color: #3498db; /* Blue */
+  --right-btn-color: #2ecc71; /* Green */
+  --hover-width: 75%;
+  --other-width: 25%;
+  --transition-speed: 800ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 25%; /* Adjusted position */
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.action-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%; /* Adjusted position */
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 16rem; /* Slightly wider button */
+  padding: 1.5rem;
+  border-radius: 5px; /* Rounded corners for button */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.split-section.left-section .action-btn:hover {
+  background-color: var(--left-btn-color);
+  border-color: var(--left-btn-color);
+}
+
+.split-section.right-section .action-btn:hover {
+  background-color: var(--right-btn-color);
+  border-color: var(--right-btn-color);
+}
+
+.main-split-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333; /* Fallback background */
+}
+
+.split-section {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split-section.left-section {
+  left: 0;
+  background: url('https://picsum.photos/id/104/1920/1080'); /* New image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.split-section.left-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-overlay-color);
+}
+
+.split-section.right-section {
+  right: 0;
+  background: url('https://picsum.photos/id/1083/1920/1080'); /* New image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.split-section.right-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-overlay-color);
+}
+
+.split-section.right-section,
+.split-section.left-section,
+.split-section.right-section::before,
+.split-section.left-section::before {
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.hover-left .left-section {
+  width: var(--hover-width);
+}
+
+.hover-left .right-section {
+  width: var(--other-width);
+}
+
+.hover-right .right-section {
+  width: var(--hover-width);
+}
+
+.hover-right .left-section {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2.5rem; /* Adjusted font size */
+    top: 20%;
+  }
+
+  .action-btn {
+    padding: 1.2rem;
+    width: 14rem; /* Adjusted width */
+    font-size: 1rem;
+  }
+}

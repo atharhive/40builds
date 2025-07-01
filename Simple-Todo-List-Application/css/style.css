@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  color: #333; /* Dark text */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #3498db; /* Blue for title */
+  font-size: 8rem; /* Slightly smaller title */
+  text-align: center;
+  opacity: 0.6; /* Slightly less opaque */
+  margin-bottom: 20px;
+}
+
+#taskForm {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  max-width: 100%;
+  width: 450px; /* Wider form */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.task-input {
+  border: none;
+  color: #333;
+  font-size: 1.5rem; /* Slightly smaller font */
+  padding: 1rem 1.5rem; /* Adjusted padding */
+  display: block;
+  width: 100%;
+  background-color: #ecf0f1; /* Light background for input */
+}
+
+.task-input::placeholder {
+  color: #bdc3c7; /* Light grey placeholder */
+}
+
+.task-input:focus {
+  outline-color: #2ecc71; /* Green outline on focus */
+}
+
+.task-list {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.task-list li {
+  border-top: 1px solid #e0e0e0; /* Lighter border */
+  cursor: pointer;
+  font-size: 1.2rem; /* Slightly smaller font */
+  padding: 1rem 1.5rem; /* Adjusted padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text and delete icon */
+}
+
+.task-list li.completed {
+  color: #7f8c8d; /* Grey for completed tasks */
+  text-decoration: line-through;
+}
+
+small {
+  color: #7f8c8d; /* Grey for small text */
+  margin-top: 20px; /* Adjusted margin */
+  text-align: center;
+}
+
+#clearCompletedBtn {
+  background-color: #e74c3c; /* Red button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#clearCompletedBtn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

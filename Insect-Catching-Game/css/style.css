@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c3e50; /* Dark blue-grey */
+  color: #ecf0f1; /* Light grey */
+  font-family: 'Press Start 2P', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #ecf0f1;
+}
+
+h1 {
+  line-height: 1.4;
+}
+
+.btn {
+  border: 0;
+  background-color: #2ecc71; /* Green button */
+  color: #fff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.targets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.targets-list li {
+  margin: 10px;
+}
+
+.select-target-btn {
+  background-color: #34495e; /* Slightly lighter blue-grey */
+  border: 2px solid #ecf0f1; /* Light grey border */
+  color: #ecf0f1;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.select-target-btn:hover {
+  background-color: #2ecc71; /* Green on hover */
+  color: #fff;
+}
+
+.select-target-btn:active {
+  background-color: rgba(46, 204, 113, 0.7); /* Slightly transparent green on active */
+}
+
+.select-target-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.game-area {
+  position: relative;
+}
+
+.game-info {
+  position: absolute;
+  top: 20px;
+}
+
+.game-info:first-child {
+  left: 20px;
+}
+
+.game-info:last-child {
+  right: 20px;
+}
+
+.game-message {
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: transform 0.4s ease-in;
+}
+
+.game-message.visible {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}
+
+.bug {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bug.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.bug img {
+  width: 100px;
+  height: 100px;
+}
+
+.restart-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}

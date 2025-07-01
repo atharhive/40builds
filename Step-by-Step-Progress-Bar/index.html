@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Multi-Step Progress Indicator</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Setup Progress</h1>
+      <div class="progress-indicator-container">
+        <div class="progress-line" id="progressLine"></div>
+        <div class="step-circle active">1</div>
+        <div class="step-circle">2</div>
+        <div class="step-circle">3</div>
+        <div class="step-circle">4</div>
+        <div class="step-circle">5</div>
+      </div>
+
+      <button class="nav-btn" id="previousStepBtn" disabled>Previous</button>
+      <button class="nav-btn" id="nextStepBtn">Next</button>
+      <button class="nav-btn reset-btn" id="resetProgressBtn">Reset</button>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

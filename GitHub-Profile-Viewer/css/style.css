@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c3e50; /* Dark blue-grey */
+  color: #ecf0f1; /* Light grey */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.user-search-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-search-form input {
+  width: 100%;
+  display: block;
+  background-color: #34495e; /* Slightly lighter blue-grey */
+  border: none;
+  border-radius: 10px;
+  color: #ecf0f1; /* Light grey */
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.user-search-form input::placeholder {
+  color: #bdc3c7; /* Lighter grey for placeholder */
+}
+
+.user-search-form input:focus {
+  outline: none;
+  border: 2px solid #2ecc71; /* Green border on focus */
+}
+
+.profile-card {
+  max-width: 800px;
+  background-color: #34495e; /* Slightly lighter blue-grey */
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #2c3e50; /* Dark blue-grey border */
+  height: 150px;
+  width: 150px;
+}
+
+.user-details {
+  color: #ecf0f1; /* Light grey */
+  margin-left: 2rem;
+}
+
+.user-details h2 {
+  margin-top: 0;
+}
+
+.user-details ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-details ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-details ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo-tag {
+  text-decoration: none;
+  color: #ecf0f1; /* Light grey */
+  background-color: #2ecc71; /* Green */
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+@media (max-width: 500px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-search-form {
+    max-width: 400px;
+  }
+}

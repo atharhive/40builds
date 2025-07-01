@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+  color: #333; /* Dark text */
+}
+
+h1 {
+  margin: 20px 0 10px;
+  color: #2c3e50; /* Dark blue-grey */
+}
+
+#resetAnimationsBtn {
+  background-color: #e74c3c; /* Red button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#resetAnimationsBtn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.animated-box {
+  background-color: #3498db; /* Blue boxes */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px; /* Wider boxes */
+  height: 220px; /* Taller boxes */
+  margin: 15px; /* Increased margin */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  transform: translateX(400%);
+  transition: transform 0.5s ease-out; /* Smoother transition */
+}
+
+.animated-box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.animated-box.show {
+  transform: translateX(0);
+}
+
+.animated-box h2 {
+  font-size: 40px; /* Slightly smaller font */
+}

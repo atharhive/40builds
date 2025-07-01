@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+  --border-color: #2196f3; /* Blue */
+  --fill-color: #42a5f5; /* Lighter blue */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3f2fd; /* Light blue background */
+  color: #1565c0; /* Deep blue text */
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 10px 0 0;
+  color: #1565c0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+  color: #1976d2;
+}
+
+.cup {
+  background-color: #ffffff; /* White cup */
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.15);
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  cursor: pointer;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
+  border: 2px solid var(--border-color);
+  color: #1976d2;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
+  border-color: #1976d2;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.18);
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+  color: #1976d2;
+}
+
+.remained span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 12px;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  height: 0;
+  transition: 0.3s ease;
+  color: #fff;
+  border-radius: 0 0 40px 40px;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+  color: #1976d2;
+}

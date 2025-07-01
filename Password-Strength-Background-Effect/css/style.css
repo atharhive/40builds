@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f4f7f6; /* Light grey background */
+}
+
+.background-blur-area {
+  background: url('https://picsum.photos/id/1043/1920/1080') no-repeat center center/cover; /* New background image */
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  z-index: -1;
+  filter: blur(20px); /* Initial blur */
+  transition: filter 0.3s ease-out; /* Smooth transition for blur */
+}
+
+.login-card {
+  background-color: #ffffff; /* White card background */
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px;
+  width: 90%;
+}
+
+.login-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50; /* Dark blue-grey */
+}
+
+.login-card p {
+  font-size: 0.9rem;
+  color: #7f8c8d; /* Grey text */
+  margin-bottom: 30px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e; /* Slightly lighter blue-grey */
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7; /* Light grey border */
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2); /* Blue glow on focus */
+}
+
+.submit-btn {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}

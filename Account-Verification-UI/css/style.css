@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #333; /* Dark text */
+}
+
+.verification-container {
+  background-color: #fff;
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 10px;
+  padding: 40px; /* Increased padding */
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.verification-container h2 {
+  margin-bottom: 15px;
+  color: #2c3e50; /* Dark blue-grey */
+}
+
+.verification-container p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.code-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.code-digit {
+  caret-color: transparent;
+  border-radius: 5px;
+  font-size: 70px; /* Slightly smaller font */
+  height: 100px; /* Adjusted height */
+  width: 80px; /* Adjusted width */
+  border: 1px solid #bdc3c7; /* Light grey border */
+  margin: 0 5px; /* Adjusted margin */
+  text-align: center;
+  font-weight: 300;
+  -moz-appearance: textfield;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.code-digit::-webkit-outer-spin-button,
+.code-digit::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code-digit:valid {
+  border-color: #2ecc71; /* Green on valid */
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2); /* Green glow */
+}
+
+.instruction-text {
+  background-color: #ecf0f1; /* Light grey background */
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 450px; /* Wider info box */
+  color: #7f8c8d; /* Grey text */
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#resendCodeBtn {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#resendCodeBtn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+@media (max-width: 600px) {
+  .code-input-group {
+    flex-wrap: wrap;
+  }
+
+  .code-digit {
+    font-size: 50px;
+    height: 70px;
+    width: 60px;
+    margin: 5px;
+  }
+}

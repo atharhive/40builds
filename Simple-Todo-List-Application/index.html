@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task Management App</title>
+  </head>
+  <body>
+    <h1>My Tasks</h1>
+    <form id="taskForm">
+      <input type="text" class="task-input" id="taskInput" placeholder="Add a new task..." autocomplete="off">
+
+      <ul class="task-list" id="taskList"></ul>
+    </form>
+    <small>Left click to mark as complete. <br> Right click to remove task.</small>
+    <button id="clearCompletedBtn">Clear Completed</button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

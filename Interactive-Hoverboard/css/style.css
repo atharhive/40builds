@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c3e50; /* Dark blue-grey */
+  color: #ecf0f1; /* Light grey */
+  font-family: 'sans-serif';
+  display: flex;
+  flex-direction: column; /* Added for title */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #ecf0f1;
+}
+
+.grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 500px; /* Slightly larger grid */
+  border: 2px solid #34495e; /* Border around the grid */
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.grid-cell {
+  background-color: #34495e; /* Cell background */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  height: 18px; /* Slightly larger cells */
+  width: 18px; /* Slightly larger cells */
+  margin: 1px; /* Smaller margin for tighter grid */
+  transition: 0.5s ease; /* Faster transition */
+  border-radius: 2px;
+}
+
+.grid-cell.highlight {
+  transition-duration: 0s;
+}

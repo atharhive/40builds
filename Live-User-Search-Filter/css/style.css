@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  border-radius: 8px; /* Slightly more rounded */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  overflow: hidden;
+  width: 350px; /* Slightly wider container */
+}
+
+.title {
+  margin: 0;
+  color: #ecf0f1; /* Light grey */
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  opacity: 0.9; /* Slightly less transparent */
+  color: #ecf0f1;
+}
+
+.header {
+  background-color: #3498db; /* Blue header */
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.header input {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.header input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+.header input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3); /* More opaque on focus */
+}
+
+.user-list {
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  padding: 20px;
+  align-items: center; /* Vertically align items */
+}
+
+.user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #bdc3c7; /* Light grey border for avatar */
+}
+
+.user-list .user-info {
+  margin-left: 15px; /* Increased margin */
+}
+
+.user-list .user-info h4 {
+  margin: 0 0 5px; /* Adjusted margin */
+  color: #34495e; /* Darker blue-grey for name */
+}
+
+.user-list .user-info p {
+  font-size: 13px; /* Slightly larger font */
+  color: #7f8c8d; /* Grey for location */
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #ecf0f1; /* Lighter border */
+}
+
+.user-list li.hide {
+  display: none;
+}
+
+#clearFilterBtn {
+  background-color: #2ecc71; /* Green button */
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#clearFilterBtn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}

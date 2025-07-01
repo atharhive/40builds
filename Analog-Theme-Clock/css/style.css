@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-bg: #f4f7f6;
+  --dark-bg: #2c3e50;
+  --light-text: #333;
+  --dark-text: #ecf0f1;
+  --accent-color: #3498db;
+  --second-accent-color: #2ecc71;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  flex-direction: column; /* Arrange buttons and clock vertically */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.theme-toggle-btn,
+.format-toggle-btn {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 5px; /* Spacing between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover,
+.format-toggle-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.theme-toggle-btn:focus,
+.format-toggle-btn:focus {
+  outline: none;
+}
+
+.clock-display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px; /* Space from buttons */
+}
+
+.analog-clock {
+  position: relative;
+  width: 250px; /* Larger clock */
+  height: 250px; /* Larger clock */
+  border: 5px solid var(--accent-color); /* Blue border */
+  border-radius: 50%;
+  background-color: #ffffff; /* White clock face */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+html.dark .analog-clock {
+  background-color: #34495e; /* Darker clock face in dark mode */
+  border-color: var(--second-accent-color); /* Green border in dark mode */
+}
+
+.needle {
+  background-color: var(--light-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in linear;
+  border-radius: 5px;
+}
+
+html.dark .needle {
+  background-color: var(--dark-text);
+}
+
+.needle.hour-needle {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 50px; /* Shorter hour hand */
+  width: 4px; /* Thicker hour hand */
+}
+
+.needle.minute-needle {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 80px; /* Longer minute hand */
+  width: 3px;
+}
+
+.needle.second-needle {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 90px; /* Longest second hand */
+  background-color: #e74c3c; /* Red second hand */
+  width: 2px;
+}
+
+.center-dot {
+  background-color: #e74c3c; /* Red center dot */
+  width: 12px; /* Larger center dot */
+  height: 12px; /* Larger center dot */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.center-dot::after {
+  content: '';
+  background-color: var(--light-text);
+  width: 6px; /* Inner dot */
+  height: 6px; /* Inner dot */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+html.dark .center-dot::after {
+  background-color: var(--dark-text);
+}
+
+.digital-time {
+  font-size: 48px; /* Larger digital time */
+  margin-top: 20px;
+}
+
+.current-date {
+  color: #7f8c8d; /* Grey for date */
+  font-size: 16px; /* Larger date font */
+  letter-spacing: 0.5px; /* Increased letter spacing */
+  text-transform: uppercase;
+}
+
+.current-date .date-day-circle {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 50%;
+  height: 25px; /* Larger date circle */
+  width: 25px; /* Larger date circle */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  transition: all 0.5s ease-in;
+  font-size: 14px;
+}
+
+html.dark .current-date .date-day-circle {
+  background-color: var(--second-accent-color);
+}

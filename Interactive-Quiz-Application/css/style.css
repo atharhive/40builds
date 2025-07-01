@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 650px; /* Slightly wider */
+  overflow: hidden;
+}
+
+.quiz-header {
+  padding: 3rem; /* Adjusted padding */
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+  color: #2c3e50; /* Dark blue-grey for question */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #555; /* Grey for options */
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+.restart-btn {
+  background-color: #2ecc71; /* Green restart button */
+  margin-top: 20px;
+}
+
+.restart-btn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}

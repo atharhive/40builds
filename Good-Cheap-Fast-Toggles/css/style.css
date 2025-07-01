@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #333; /* Dark text */
+}
+
+h2 {
+  margin-bottom: 40px;
+  color: #2c3e50; /* Dark blue-grey */
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0; /* Increased margin */
+  width: 250px; /* Wider container */
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  background-color: #bdc3c7; /* Light grey for off state */
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 20px 0; /* Increased margin */
+  width: 90px; /* Wider label */
+  height: 45px; /* Taller label */
+  transition: background-color 0.3s ease;
+}
+
+.toggle:checked + .label {
+  background-color: #2ecc71; /* Green for on state */
+}
+
+.ball {
+  background: #fff;
+  height: 38px; /* Larger ball */
+  width: 38px; /* Larger ball */
+  border-radius: 50%;
+  position: absolute;
+  top: 3.5px; /* Adjusted position */
+  left: 3.5px; /* Adjusted position */
+  align-items: center;
+  justify-content: center;
+  animation: slideOff 0.3s linear forwards;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for ball */
+}
+
+.toggle:checked + .label .ball {
+  animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(25px) scale(1.1);
+  }
+  100% {
+    transform: translateX(45px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(45px) scale(1);
+  }
+  50% {
+    transform: translateX(25px) scale(1.1);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

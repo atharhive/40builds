@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+  --progress-fill-color: #2ecc71; /* Green */
+  --progress-empty-color: #bdc3c7; /* Light grey */
+  --text-color: #34495e; /* Dark blue-grey */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.main-container {
+  text-align: center;
+  background-color: #ffffff; /* White background for container */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.progress-indicator-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px; /* Increased margin */
+  max-width: 100%;
+  width: 450px; /* Wider progress bar */
+}
+
+.progress-indicator-container::before {
+  content: '';
+  background-color: var(--progress-empty-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress-line {
+  background-color: var(--progress-fill-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.step-circle {
+  background-color: #ffffff; /* White circle background */
+  color: var(--progress-empty-color);
+  border-radius: 50%;
+  height: 35px; /* Slightly larger circles */
+  width: 35px; /* Slightly larger circles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--progress-empty-color);
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+
+.step-circle.active {
+  border-color: var(--progress-fill-color);
+  color: var(--progress-fill-color); /* Green text for active circle */
+}
+
+.nav-btn {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 10px 30px; /* Increased padding */
+  margin: 5px;
+  font-size: 16px; /* Larger font */
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:active {
+  transform: scale(0.98);
+}
+
+.nav-btn:focus {
+  outline: 0;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.nav-btn:disabled {
+  background-color: var(--progress-empty-color);
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background-color: #e74c3c; /* Red reset button */
+}
+
+.reset-btn:hover:not(:disabled) {
+  background-color: #c0392b; /* Darker red on hover */
+}

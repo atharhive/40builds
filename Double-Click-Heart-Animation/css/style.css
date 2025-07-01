@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333; /* Dark text */
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+small {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.image-container {
+  height: 440px;
+  width: 300px;
+  background: url('https://picsum.photos/id/1040/300/440') no-repeat center center/cover;
+  margin: auto;
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container .heart-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 0.6s linear;
+  opacity: 0;
+  pointer-events: none; /* Ensure clicks go through to the image */
+}
+
+.image-container .heart-icon svg {
+  width: 100px;
+  height: 100px;
+  fill: #e74c3c; /* Red heart */
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}

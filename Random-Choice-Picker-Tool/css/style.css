@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #34495e; /* Dark blue-grey */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h3 {
+  color: #ecf0f1; /* Light grey */
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.container {
+  width: 550px; /* Slightly wider container */
+  background-color: #2c3e50; /* Darker blue-grey for container */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+textarea {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 120px; /* Taller textarea */
+  font-family: inherit;
+  padding: 15px; /* Increased padding */
+  margin: 0 0 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #ecf0f1; /* Light grey background */
+  color: #333; /* Dark text */
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid #2ecc71; /* Green border on focus */
+}
+
+.tag {
+  background-color: #3498db; /* Blue tag */
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 0 8px 10px 0; /* Increased margin */
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.tag.highlight {
+  background-color: #e74c3c; /* Red highlight */
+}
+
+#clearChoicesBtn {
+  background-color: #e74c3c; /* Red button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#clearChoicesBtn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 380px;
+  background-color: #ffffff; /* White card background */
+}
+
+.card-header {
+  height: 220px;
+  background-color: #e0e0e0; /* Placeholder background for image */
+}
+
+.card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-title {
+  height: 24px;
+  margin: 0;
+  background-color: #e0e0e0; /* Placeholder background for title */
+  border-radius: 4px;
+}
+
+.card-excerpt {
+  color: #555;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+}
+
+.card-excerpt span {
+  background-color: #e0e0e0; /* Placeholder background for text lines */
+  border-radius: 4px;
+  display: block;
+  height: 12px;
+  margin-bottom: 8px;
+}
+
+.card-excerpt span:last-child {
+  width: 80%;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  background-color: #e0e0e0; /* Placeholder background for profile image */
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 15px;
+}
+
+.author-info strong {
+  background-color: #e0e0e0; /* Placeholder background for name */
+  border-radius: 4px;
+  height: 14px;
+  width: 120px;
+  margin-bottom: 5px;
+}
+
+.author-info small {
+  color: #888;
+  background-color: #e0e0e0; /* Placeholder background for date */
+  border-radius: 4px;
+  height: 10px;
+  width: 80px;
+}
+
+/* Loading animation */
+.loading .card-header,
+.loading .card-title,
+.loading .card-excerpt span,
+.loading .profile-img,
+.loading .author-info strong,
+.loading .author-info small {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}

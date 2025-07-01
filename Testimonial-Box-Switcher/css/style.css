@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px;
+}
+
+.testimonial-carousel-container {
+  background-color: #34495e; /* Dark blue-grey */
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  max-width: 800px; /* Slightly wider */
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.quote-icon {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+  width: 40px; /* SVG width */
+  height: 40px; /* SVG height */
+  fill: rgba(255, 255, 255, 0.3); /* Fill color for SVG */
+}
+
+.quote-right {
+  left: 40px;
+}
+
+.quote-left {
+  right: 40px;
+}
+
+.testimonial-text {
+  line-height: 28px;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-profile .user-avatar {
+  border-radius: 50%;
+  height: 80px; /* Slightly larger avatar */
+  width: 80px; /* Slightly larger avatar */
+  object-fit: cover;
+  border: 3px solid #2ecc71; /* Green border for avatar */
+}
+
+.user-profile .user-details {
+  margin-left: 15px; /* Increased margin */
+}
+
+.user-profile .user-name {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.user-profile .user-role {
+  font-weight: normal;
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #bdc3c7; /* Light grey for role */
+}
+
+.progress-indicator {
+  background-color: #2ecc71; /* Green progress bar */
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite; /* Animation duration */
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-carousel-container {
+    padding: 20px 30px;
+  }
+
+  .quote-icon {
+    display: none;
+  }
+}

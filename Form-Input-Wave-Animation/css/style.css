@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #34495e; /* Dark blue-grey */
+  color: #ecf0f1; /* Light grey */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.3); /* Slightly darker transparent background */
+  padding: 30px 50px; /* Increased padding */
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ecf0f1; /* Light grey for heading */
+}
+
+.container a {
+  text-decoration: none;
+  color: #2ecc71; /* Green for links */
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #2ecc71; /* Green button */
+  padding: 15px;
+  font-family: inherit;
+  font-size: 18px; /* Slightly larger font */
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff; /* White text for button */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+.text {
+  margin-top: 30px;
+  text-align: center; /* Center align text */
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #ecf0f1 solid; /* Light grey border */
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #ecf0f1; /* Light grey text */
+  position: relative;
+  z-index: 100;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #2ecc71; /* Green border on focus/valid */
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus ~ label span,
+.form-control input:valid ~ label span {
+  color: #2ecc71; /* Green label on focus/valid */
+  transform: translateY(-30px);
+}

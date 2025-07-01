@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e0e7e9; /* Light blue-grey */
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #333; /* Dark text */
+}
+
+.panel-container {
+  background-color: #ffffff; /* White panel background */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 8px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  max-width: 450px; /* Slightly wider */
+}
+
+.panel-container strong {
+  line-height: 24px; /* Increased line height */
+  font-size: 1.1em;
+  color: #2c3e50; /* Dark blue-grey for question */
+}
+
+.ratings-container {
+  display: flex;
+  margin: 25px 0; /* Increased margin */
+}
+
+.rating {
+  flex: 1;
+  cursor: pointer;
+  padding: 20px;
+  margin: 0 8px; /* Increased margin between ratings */
+  transition: all 0.3s ease; /* Smooth transition for hover/active */
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 8px;
+  background-color: #f8f9fa; /* Very light grey background */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); /* Subtle shadow on hover/active */
+}
+
+.rating .emoji {
+  width: 50px; /* Slightly larger emoji */
+  height: 50px;
+  fill: #34495e; /* Darker blue-grey for emoji color */
+}
+
+.rating small {
+  color: #555;
+  display: block; /* Changed to block for better spacing */
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.rating:hover small,
+.rating.active small {
+  color: #2c3e50; /* Darker text on hover/active */
+}
+
+.btn {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.thank-you-message {
+  color: #2ecc71; /* Green for success message */
+  font-size: 1.2em;
+  margin-top: 20px;
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 20px; /* Slightly less rounded */
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in; /* Smoother transition */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.panel h3 {
+  font-size: 28px; /* Slightly larger font */
+  position: absolute;
+  bottom: 25px; /* Slightly higher */
+  left: 25px; /* Slightly more to the right */
+  margin: 0;
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}

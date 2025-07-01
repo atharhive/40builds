@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.mobile-device-frame {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #bdc3c7; /* Light grey border */
+  border-radius: 15px;
+  height: 600px;
+  width: 340px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.mobile-device-frame .content-panel {
+  opacity: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px); /* Adjust for nav height */
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-device-frame .content-panel.show {
+  opacity: 1;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #2c3e50; /* Dark blue-grey for nav */
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+nav li {
+  color: #bdc3c7; /* Light grey for inactive icons/text */
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: #2ecc71; /* Green for active/hover */
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Use current text color for SVG */
+}

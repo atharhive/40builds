@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bug Squish Game</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Bug Squish Game</h1>
+      <button class="btn" id="start-game-btn">Start Game</button>
+    </div>
+
+    <div class="screen">
+      <h1>Choose Your Target:</h1>
+      <ul class="targets-list">
+        <li>
+          <button class="select-target-btn">
+            <p>Ladybug</p>
+            <img src="https://picsum.photos/id/30/100/100" alt="Ladybug">
+          </button>
+        </li>
+        <li>
+          <button class="select-target-btn">
+            <p>Butterfly</p>
+            <img src="https://picsum.photos/id/165/100/100" alt="Butterfly"/>
+          </button>
+        </li>
+        <li>
+          <button class="select-target-btn">
+            <p>Bee</p>
+            <img src="https://picsum.photos/id/200/100/100" alt="Bee"/>
+          </button>
+        </li>
+        <li>
+          <button class="select-target-btn">
+            <p>Dragonfly</p>
+            <img src="https://picsum.photos/id/210/100/100" alt="Dragonfly"/>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen game-area" id="game-area">
+      <h3 id="gameTime" class="game-info">Time: 00:00</h3>
+      <h3 id="gameScore" class="game-info">Score: 0</h3>
+      <h5 id="gameMessage" class="game-message">
+        Catch as many as you can!
+      </h5>
+      <button class="btn restart-btn" id="restartGameBtn">Restart Game</button>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
